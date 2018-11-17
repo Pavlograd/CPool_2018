@@ -1,0 +1,54 @@
+/*
+** EPITECH PROJECT, 2018
+** my_evil_str
+** File description:
+** task04
+*/
+
+#include <stdio.h>
+#include <unistd.h>
+	
+void my_putchar(char c)
+{
+    write(1, &c,  1);
+}
+
+int my_strlen(char const *str)
+{
+    int i = 0;
+
+    while(str[i] != '\0') {
+	i++;
+    }
+    
+    return (i);
+}
+
+char my_swap(char *a, char *b)
+{
+    char c = *a;
+    *a = *b;
+    *b = c;
+}    
+
+char *my_evil_str(char *str)
+{
+    int j = 0;
+    int k = my_strlen(str) -1;
+    my_putchar(k);
+
+    while (j < k) {
+	my_swap(&str[j], &str[k]);
+	k--;
+	j++;
+    }
+
+    return (str);
+}    
+
+int main(void)
+{
+    char *str = "Hello";
+    my_evil_str(str);
+    return (0);
+}    

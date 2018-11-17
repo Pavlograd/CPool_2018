@@ -1,0 +1,47 @@
+/*
+** EPITECH PROJECT, 2018
+** my_revstr
+** File description:
+** task03
+*/
+
+#include <stdio.h>
+#include <unistd.h>
+
+void my_putchar(char c)
+{
+  write(1, &c,  1);
+}
+
+void my_putstr(char *str)
+{
+    int i = 0;
+
+    while (str[i] != '\0') {
+	my_putchar(str[i]);
+	i++;
+    }
+}
+
+char *my_revstr(char *str)
+{
+    int incretion = 0;
+    int decretion = 0;
+    int c = str[incretion];
+
+    for (decretion = 0; str[decretion] != '\0'; decretion++);
+    while (str[incretion] != '\0') {
+        str[incretion] = str[incretion];
+        str[decretion] = c;
+        decretion--;
+        incretion++;
+        my_putchar(str[decretion]);
+    }
+}
+
+int main(void)
+{
+    char str[] = "Hello";
+
+    my_revstr(str);
+}

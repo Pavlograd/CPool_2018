@@ -1,0 +1,29 @@
+/*
+** EPITECH PROJECT, 2018
+** my_str_to_word_array
+** File description:
+** task04
+*/
+
+char **my_str_to_word_array(char const *str)
+{
+    int i = 0;
+    int len = my_strlen(str);
+    char *src;
+
+    src = malloc(len +1);
+    while (i < len) {
+        src[i] = str[i];
+        i++;
+    }
+    src[i] = '\0';
+    my_putstr(src);
+    free(str);
+}
+
+int main(void)
+{
+    char the_word[] = "The words to the the code";
+
+    my_str_to_word_array(the_word);
+}
