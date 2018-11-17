@@ -1,0 +1,59 @@
+/*
+** EPITECH PROJECT, 2018
+** tree
+** File description:
+** projet01
+*/
+
+#include <stdio.h>
+#include <unistd.h>
+
+void my_putchar(char c)
+{
+  write(1, &c,  1);
+}
+
+int tronc(int size)
+{
+    int i = 0;
+    int j = 0;
+
+    for (j = 0; j < size; j++) {
+	for (i = 0; i < size; i++) {
+            my_putchar('|');
+        }
+        my_putchar('\n');
+    }
+}
+
+int monbeausapin(int size)
+{
+    int i = 0;
+    int j = 0;
+    int k = size * size;
+
+    for (i = 0; i < k; i++) {
+	for (j = (2 * i) + 1; j > 0; j--) {
+	    my_putchar('*');
+	}
+	my_putchar('\n');
+    }
+}    
+
+void tree(int size)
+{
+    int i = 0;
+    int j = size * size;
+    int k = 0;
+    
+    
+    tronc(size);	    
+}    
+
+int main(void)
+{
+    int size = 1;
+
+    monbeausapin(size);
+    tree(size);
+}    
