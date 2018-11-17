@@ -1,0 +1,23 @@
+##
+## EPITECH PROJECT, 2018
+## Makefile
+## File description:
+## makefile
+##
+
+SRC	=	main.c
+
+NAME	=	a.out
+
+all:	$(NAME)
+
+$(NAME):
+	gcc -o $(NAME) $(SRC) -I./include -l csfml-window -l csfml-graphics -l csfml-system -ggdb3
+
+clean:
+	rm -f $(OBJ)
+
+fclean:	clean
+	rm -f $(NAME)
+
+re:	fclean all

@@ -1,0 +1,18 @@
+##
+## EPITECH PROJECT, 2018
+## Makefile
+## File description:
+## task01
+##
+
+NAME    =    task01
+
+all: $(NAME)
+
+$(NAME):
+
+clean:
+        rm -f
+
+fclean: clean
+        rm -f $(NAME)

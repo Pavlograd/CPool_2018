@@ -1,0 +1,16 @@
+/*
+** EPITECH PROJECT, 2018
+** my_params_to_list
+** File description:
+** task01
+*/
+
+#include "my.h"
+
+linked_list_t *my_params_to_list(int ac, char * const *av)
+{
+}
+
+int main(int argc, char **argv)
+{
+}
